@@ -35,7 +35,7 @@ def check_number(_number, _input):
         if _input.upper() == "FIZZ":
             return True
     else:
-        if _number == int(_input):
+        if str(_number) == _input:
             return True
         else:
             return False
@@ -46,7 +46,7 @@ def check_number(_number, _input):
 
 time.sleep(0.334)
 
-print('''\n\n Let's begin this round of \"Fizz-Buzz!\"
+print('''\n\nLet's begin this round of \"Fizz-Buzz!\"
       
 The rules: 
     In this game, we will go through the numbers 1-100. However...
@@ -61,7 +61,7 @@ Enter "1" to begin!\n''', end="", flush=True)
 
 while game_running:
     # Fail if the input doesn't meet the requirements
-    if not check_number(current_number, input("\r\r\r>>>")):
+    if not check_number(current_number, input(">>>")):
         lives -= 1
         if lives <= 0:
             game_running = False
