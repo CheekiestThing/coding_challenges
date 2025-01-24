@@ -102,9 +102,9 @@ while game_running:
     _check.append(".")
     # Diagonal matches
     hori_offset = 0
-    while hori_offset < board_collumns-4:
+    while hori_offset < board_collumns-3:
         vert_offset = 0
-        while vert_offset < board_rows-4:
+        while vert_offset < board_rows-3:
             _check.append(board[hori_offset+vert_offset][vert_offset])
             vert_offset += 1
         hori_offset += 1
