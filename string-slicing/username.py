@@ -29,9 +29,9 @@ while not username_valid:
 if username_valid:
     _code_location = _input.find("_")
     _year = "Staff"
-    if int(_input[0:2]) > 0 :
-        _year = "Year " + _input[0:2]
-
+    if int(_input[0:2]) > 0:
+        _year = str(int(_input[0:2])) + "th Year"
+    
     _name = _input[2].upper() + ". " + _input[3:_code_location]
     _user_type = _input[_code_location:_code_location+2].replace("_S", "Student").replace("_T", "Teacher").replace("_A", "Admin")
 
